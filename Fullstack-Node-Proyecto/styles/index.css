@@ -84,6 +84,8 @@ footer {
 .container-flex-hyf {
     display: flex;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container-flex-hyf>ul {
