@@ -113,30 +113,50 @@ h3 {
     display: grid;
     box-sizing: border-box;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 0.5fr repeat(4, 1fr);
     grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz";
-}
-
-.flex-lanzamientos {
-    display: flex;
 }
 
 .nuevosIngresos {
     grid-area: ing;
 }
 
+.flex-lanzamientos {
+    display: flex;
+}
+
+.flex-lanzamientos article {
+    /* width: 350px; */
+}
+
+img {
+    width: 100%;
+}
+
 .ultimos-lanzamientos {
     grid-area: ultLanz;
+    /* width: auto; */
 }
 
 #primer-item {
     grid-area: item1;
+    display: flex;
+    align-items: center;
 }
 
 #segundo-item {
     grid-area: item2;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 
 #tercer-item {
     grid-area: item3;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    color: var(--primary-solid);
 }
