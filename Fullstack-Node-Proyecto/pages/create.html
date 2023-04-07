@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE ITEM</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <picture>
+                <a href="index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
+            </picture>
+            <a href="index.html">SALIR</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <h1>CREAR NUEVO ITEM</h1>
+        <!-- Agregar el action al form -->
+        <form action="">
+
+            <section>
+                <label for="categoria">Categoría:</label>
+                <!-- agregar placeholder -->
+                <select name="categoria" id="categoria">
+                    <!--  agregar categorias -->
+                    <!-- <option value="star-wars">STAR WARS</option> -->
+                </select>
+
+                <label for="licencia">Licencia::</label>
+                <!-- agregar placeholder -->
+                <select name="licencia" id="licencia">
+                    <!--  agregar licencias -->
+                    <option value="" disabled selected>Select your option</option>
+                    <!-- <option value=""></option> -->
+                </select>
+            </section>
+            <section>
+                <label for="nombre-producto">Nombre del producto:</label>
+                <input type="text" name="nombre-producto" id="nombre-producto" placeholder="Kakashi Hatake Shippuden Saga">
+                <textarea name="descripcion-producto" id="descripcion-producto" cols="30" rows="10"></textarea>
+            </section>
+            <section>
+                <label for="sku">SKU:</label>
+                <input type="text" name="sku" id="sku" placeholder="SSK111AB001">
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" id="precio" placeholder="$ 0.000,00">
+                <label for="stock">Stock:</label>
+                <input type="text" name="stock" id="stock" placeholder="0">
+            </section>
+            <section>
+                <label for="descuento">Descuento:</label>
+                <input type="text" name="descuento" id="descuento" placeholder="0%">
+                <label for="cuotas">Cuotas:</label >
+                <select name="cuotas" id="cuotas">
+                    <!-- agregar las cuotas -->
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+
+                <label for="imagenes">Imágenes:</label>
+                <input type="file" name="imagen" accept="image/png, image/gif, image/jpeg, image/webp" id="">
+                <input type="submit" value="Agregar Producto">
+                <input type="reset" value="Limpiar">
+
+
+
+            </section>
+
+
+
+        </form>
+
+
+    </main>
+
+    <footer>
+        <section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../pages/shop.html">SHOP</a>
+                    </li>
+                    <li>
+                        <a href="../pages/register.html">REGISTRARSE</a>
+                    </li>
+                    <li>
+                        <a href="../pages/login.html">INGRESAR</a>
+                    </li>
+                    <li>
+                        <a href="../pages/contact.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+            <picture><img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop"></picture>
+        </section>
+        <p>All rights reserved 2022 - Funkoshop &copy;</p>
+    </footer>
+</body>
+
+</html>
