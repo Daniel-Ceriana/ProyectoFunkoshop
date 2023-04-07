@@ -90,8 +90,8 @@ footer {
 
 .container-flex-hyf>ul {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    gap: var(--spacing-36);
 }
 
 
@@ -110,4 +110,33 @@ h3 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz";
+}
+
+.flex-lanzamientos {
+    display: flex;
+}
+
+.nuevosIngresos {
+    grid-area: ing;
+}
+
+.ultimos-lanzamientos {
+    grid-area: ultLanz;
+}
+
+#primer-item {
+    grid-area: item1;
+}
+
+#segundo-item {
+    grid-area: item2;
+}
+
+#tercer-item {
+    grid-area: item3;
 }
