@@ -125,34 +125,6 @@ footer {
     background-color: var(--primary-900);
 }
 
-.footer__item {
-    justify-self: center;
-    align-self: flex-end;
-}
-
-
-/* falta especificar que no todos los h3 tienen el mismo tamanio de fuente */
-
-h2,
-h3 {
-    font-family: var(--alternative-font);
-    font-size: var(--font-jumbo);
-}
-
-.fuente-raleway>p {
-    font-family: var(--alternative-font);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    /* display: grid;
-    box-sizing: border-box;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 0.5fr repeat(4, 1fr);
-    grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz" */
-}
-
 .width-icon {
     display: flex;
     align-items: center;
@@ -181,8 +153,82 @@ h3 {
     transition: background .3s ease-in-out;
 }
 
-.nuevosIngresos {
-    grid-area: ing;
+.footer__item {
+    justify-self: center;
+    align-self: flex-end;
+}
+
+
+/* falta especificar que no todos los h3 tienen el mismo tamanio de fuente */
+
+.hero {
+    background-image: url(../img/multimedia/funkos-banner.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    padding: var(--spacing-128);
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px) brightness(.9);
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    align-items: start;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    color: var(--light-font-solid);
+}
+
+.hero__text {
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+    font-size: var(--font-medium);
+}
+
+.hero__link {
+    display: inline-block;
+    font-size: var(--font-medium);
+    background-color: var(--light-bg-solid);
+    padding: var(--spacing-12) var(--spacing-68);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+}
+
+.hero__link:hover {
+    background-color: var(--primary-900);
+    color: var(--light-font-solid);
+}
+
+.fuente-raleway>p {
+    font-family: var(--alternative-font);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 0.5fr repeat(4, 1fr);
+    grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz" */
 }
 
 .flex-lanzamientos {
