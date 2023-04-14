@@ -29,12 +29,14 @@
     --font-large: 2.4em;
     --font-medium: 1.8em;
     --font-small: 1.6em;
-    --font-xsmall: 1.2em;
+    --font-xsmall: 1.4em;
     /* spacings */
     --spacing-128: 12.8rem;
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
@@ -54,11 +56,14 @@ html {
     font-size: 62.5%;
 }
 
+img {
+    width: 100%;
+}
+
 a {
     color: inherit;
     text-decoration: none;
     font-family: inherit;
-    font-size: var(--font-medium);
     /* en el figma dice 20px */
 }
 
@@ -79,19 +84,50 @@ footer {
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
     background-color: var(--dark-bg-solid);
+    gap: var(--spacing-36);
+    padding: var(--spacing-36);
 }
 
-.container-flex-hyf {
+
+/* .container-flex-hyf {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+.navbar {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.container-flex-hyf>ul {
+.navbar__logo {
+    max-width: 300px;
+}
+
+.navbar__menu {
     display: flex;
     align-items: center;
-    gap: var(--spacing-36);
+    gap: var(--spacing-20);
+}
+
+.navbar__link {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+
+.navbar__link:hover {
+    background-color: var(--primary-900);
+}
+
+.footer__item {
+    justify-self: center;
+    align-self: flex-end;
 }
 
 
@@ -110,11 +146,39 @@ h3 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
+    /* display: grid;
     box-sizing: border-box;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 0.5fr repeat(4, 1fr);
-    grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz";
+    grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz" */
+}
+
+.width-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover>.submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    width: 300px;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+}
+
+.submenu__link {
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+}
+
+.submenu__link:hover {
+    background-color: var(--primary-900);
+    transition: background .3s ease-in-out;
 }
 
 .nuevosIngresos {
@@ -125,17 +189,25 @@ h3 {
     display: flex;
 }
 
-.flex-lanzamientos article {
-    /* width: 350px; */
-}
-
-img {
-    width: 100%;
-}
-
 .ultimos-lanzamientos {
     grid-area: ultLanz;
     /* width: auto; */
+}
+
+.nombre {
+    font-size: var(--font-xsmall);
+}
+
+.precio {
+    font-size: var(--font-small);
+}
+
+.cuotas {
+    font-size: var(--font-xsmall);
+}
+
+h4 {
+    font-size: var(--font-medium);
 }
 
 #primer-item {

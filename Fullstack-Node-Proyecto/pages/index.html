@@ -13,29 +13,42 @@
 <body>
 
     <header>
-        <nav class="container-flex-hyf">
-            <picture>
+        <nav class="navbar container-flex-hyf">
+            <picture class="navbar__logo">
                 <a href="./index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
             </picture>
 
 
-            <ul>
-                <li>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
                     <!-- menu desplegable shop -->
-                    <a href="../pages/shop.html">SHOP</a>
+                    <a class="navbar__link width-icon" href="../pages/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">LLaveros</a>
+                        </li>
+                    </ul>
+
+
                 </li>
-                <li>
+                <li class="navbar__item">
                     <!-- agregar link a un formulario de contacto, o de info para contacto -->
-                    <a href="../pages/contacto.html">CONTACTO</a>
+                    <a class="navbar__link" href="../pages/contacto.html">CONTACTO</a>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <!-- link a login -->
-                    <a href="../pages/login.html">LOGIN</a>
+                    <a class="navbar__link" href="../pages/login.html">LOGIN</a>
                 </li>
 
-                <li>
+                <li class="navbar__item">
                     <!-- agregar carrito -->
-                    <a href="cart.html">
+                    <a class="navbar__cart" href="cart.html">
                         <img src="../img/multimedia/icons/cart-icon.svg" alt="Icono carrito"></a>
                 </li>
             </ul>
@@ -101,42 +114,42 @@
             <!-- parte de ultimos lanzamientos, poner mayuscula -->
             <h2>ÚLTIMOS LANZAMIENTOS</h2>
             <ul class="flex-lanzamientos">
-                <li>
+                <li class="ultimos-lanzamientos">
                     <article>
                         <a href="../pages/shop.html">
                             <picture><img src="../img/multimedia/star-wars/trooper-1.webp" alt=""></picture>
                             <div>
-                                <p>STAR WARS</p>
+                                <p class="nombre">STAR WARS</p>
                                 <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99.-</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                                <p class="precio">$ 1799,99.-</p>
+                                <p class="cuotas">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
 
                     </article>
                 </li>
-                <li>
+                <li class="ultimos-lanzamientos">
                     <article>
                         <a href="../pages/shop.html">
                             <picture><img src="../img/multimedia/pokemon/pidgeotto-1.webp" alt="Funko Pokemon Pidgeotto"></picture>
                             <div>
-                                <p>POKEMON</p>
+                                <p class="nombre">POKEMON</p>
                                 <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99.-</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                                <p class="precio">$ 1799,99.-</p>
+                                <p class="cuotas">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
+                <li class="ultimos-lanzamientos">
                     <article>
                         <a href="../pages/shop.html">
                             <picture><img src="../img/multimedia/harry-potter/luna-1.webp" alt="Funko Harry Potter Luna"></picture>
                             <div>
-                                <p>HARRY POTTER</p>
+                                <p class="nombre"></p>>HARRY POTTER</p>
                                 <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99.-</p>
-                                <p>33 CUOTAS SIN INTERÉS</p>
+                                <p class="precio">$ 1799,99.-</p>
+                                <p class="cuotas">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
@@ -149,30 +162,33 @@
     </main>
 
     <footer>
-        <section class="container-flex-hyf">
+        <section class="navbar">
             <nav>
-                <ul>
-                    <li>
-                        <a href="../pages/shop.html">SHOP</a>
+                <ul class="navbar__menu__footer">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../pages/shop.html">SHOP</a>
                     </li>
-                    <li>
-                        <a href="../pages/register.html">REGISTRARSE</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../pages/register.html">REGISTRARSE</a>
                     </li>
-                    <li>
-                        <a href="../pages/login.html">INGRESAR</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../pages/login.html">INGRESAR</a>
                     </li>
-                    <li>
-                        <a href="../pages/contact.html">CONTACTO</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../pages/contact.html">CONTACTO</a>
                     </li>
                 </ul>
             </nav>
-            <picture><img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop"></picture>
+            <p class="footer__item">All rights reserved 2022 - Funkoshop &copy;</p>
+            <picture class="navbar__logo__footer">
+                <img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop">
+            </picture>
         </section>
-        <p>All rights reserved 2022 - Funkoshop &copy;</p>
+
 
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 
 </html>
