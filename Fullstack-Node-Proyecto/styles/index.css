@@ -161,12 +161,16 @@ footer {
 
 /* falta especificar que no todos los h3 tienen el mismo tamanio de fuente */
 
+
+/* HERO */
+
 .hero {
     background-image: url(../img/multimedia/funkos-banner.webp);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
-    padding: var(--spacing-128);
+    /* verificar que esto sea correcto */
+    padding: var(--spacing-128) var(--spacing-8);
     position: relative;
 }
 
@@ -217,10 +221,6 @@ footer {
     color: var(--light-font-solid);
 }
 
-.fuente-raleway>p {
-    font-family: var(--alternative-font);
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -229,6 +229,57 @@ footer {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 0.5fr repeat(4, 1fr);
     grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz" */
+}
+
+
+/* COLLECTIONS */
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.collection:nth-child(2) .collection__cover {
+    order: -1;
+}
+
+.collection__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    align-items: start;
+}
+
+.collection__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 500;
+}
+
+.collection__text {
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    font-weight: 300;
+    border-bottom: 2px solid var(--primary-solid);
+    padding-bottom: 20px;
+}
+
+.collection__link {
+    display: inline-block;
+    font-size: var(--font-medium);
+    background-color: var(--dark-bg-solid);
+    color: var(--light-font-solid);
+    border-radius: 50px;
+    padding: var(--spacing-16) var(--spacing-36);
+    font-weight: 500;
+    transition: background .3s ease-in-out;
+    /* , border-radius .3s ease-in-out; */
+}
+
+.collection__link:hover {
+    background-color: var(--primary-900);
+    /* border-radius: 10px 100px /120px; */
 }
 
 .flex-lanzamientos {
@@ -254,27 +305,4 @@ footer {
 
 h4 {
     font-size: var(--font-medium);
-}
-
-#primer-item {
-    grid-area: item1;
-    display: flex;
-    align-items: center;
-}
-
-#segundo-item {
-    grid-area: item2;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-#tercer-item {
-    grid-area: item3;
-    display: flex;
-    align-items: center;
-}
-
-hr {
-    color: var(--primary-solid);
 }
