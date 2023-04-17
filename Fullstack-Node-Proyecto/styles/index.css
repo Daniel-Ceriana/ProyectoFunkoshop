@@ -79,8 +79,7 @@ p {
 
 /* cambiar color */
 
-header,
-footer {
+header {
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
     background-color: var(--dark-bg-solid);
@@ -379,6 +378,25 @@ h4 {
     color: var(--secundary-solid);
     font-weight: 700;
 }
+
+
+/* FOOTER */
+
+footer {
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+    background-color: var(--dark-bg-solid);
+    gap: var(--spacing-36);
+    padding: var(--spacing-68);
+}
+
+.footer__copy {
+    text-align: center;
+    margin-top: var(--spacing-36);
+}
+
+
+/* ANIMATIONS */
 
 @keyframes fade {
     0% {
