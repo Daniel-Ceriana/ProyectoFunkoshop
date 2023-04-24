@@ -153,11 +153,6 @@ header {
     transition: background .3s ease-in-out;
 }
 
-.footer__item {
-    justify-self: center;
-    align-self: flex-end;
-}
-
 
 /* falta especificar que no todos los h3 tienen el mismo tamanio de fuente */
 
@@ -318,6 +313,7 @@ h4 {
 .slider__title {
     font-family: var(--alternative-font);
     font-size: var(--font-display);
+    font-weight: 700;
     text-transform: uppercase;
 }
 
