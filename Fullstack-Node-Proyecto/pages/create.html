@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREATE ITEM</title>
-    <link rel="stylesheet" href="../styles/admin/admin.css">
+    <link rel="stylesheet" href="../styles/admin/create.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     </header>
 
 
-    <main>
+    <main class="container">
         <h1 class="main-title">CREAR NUEVO ITEM</h1>
         <!-- Agregar el action al form -->
         <form class="main-form" action="">
@@ -33,22 +33,29 @@
                 <label class="main-form__options--label" for="categoria">Categoría:</label>
                 <!-- agregar placeholder -->
                 <select class="main-form__options--select" name="categoria" id="categoria">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="" >categoria 1</option>
+                    <option value="" >categoria 2</option>
                     <!--  agregar categorias -->
                     <!-- <option value="star-wars">STAR WARS</option> -->
                 </select>
 
-                <label class="main-form__options--label" for="licencia">Licencia::</label>
+                <label class="main-form__options--label" for="licencia">Licencia:</label>
                 <!-- agregar placeholder -->
                 <select class="main-form__options--select" name="licencia" id="licencia">
                     <!--  agregar licencias -->
-                    <option value="" disabled selected>Select your option</option>
-                    <!-- <option value=""></option> -->
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option value="" >licencia 1</option>
+                    <option value="" >licencia 2</option>
                 </select>
             </section>
             <section class="main-form__product-name-description">
-                <label class="main-form__product-name-description--label" for="nombre-producto">Nombre del producto:</label>
-                <input class="main-form__product-name-description--input" type="text" name="nombre-producto" id="nombre-producto" placeholder="Kakashi Hatake Shippuden Saga">
-                <textarea class="main-form__product-name-description--textarea" name="descripcion-producto" id="descripcion-producto" cols="30" rows="10"></textarea>
+                <section class="main-form__product-name-description--name">
+                    <label class="main-form__product-name-description--name__label" for="nombre-producto">Nombre del producto:</label>
+                    <input class="main-form__product-name-description--name__input" type="text" name="nombre-producto" id="nombre-producto" placeholder="Kakashi Hatake Shippuden Saga">
+
+                </section>
+                <textarea class="main-form__product-name-description--textarea" name="descripcion-producto" id="descripcion-producto" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
             </section>
             <section class="main-form__inputs">
                 <label class="main-form__inputs--label" for="sku">SKU:</label>
@@ -64,8 +71,11 @@
                 <label class="main-form__promo--label" for="cuotas">Cuotas:</label >
                 <select class="main-form__promo--select" name="cuotas" id="cuotas">
                     <!-- agregar las cuotas -->
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="" disabled selected>3 Cuotas sin interés</option>
+                    <option value="" selected>3 Cuotas sin interés</option>
+                    <option value="">6 Cuotas sin interés</option>
+                    <option value="">9 Cuotas sin interés</option>
+                    <option value="">0</option>
                 </select>
 
                 
