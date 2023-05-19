@@ -6,100 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN</title>
+    <link rel="stylesheet" href="../styles/admin/admin.css">
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <picture>
-                <a href="index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
+        <nav class="navbar">
+            <picture class="navbar__logo">
+                <a href="./index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
             </picture>
-            <a href="index.html">SALIR</a>
+
+            <div class="navbar__menu">
+                <a class="navbar__link" href="../pages/login.html">SALIR</a>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <picture>
-                <img src="../img/multimedia/icons/search_icon.svg" alt="icono de busqueda">
+    <main class="container container-main">
+        <section class="search">
+            <picture class="search__icon">
+                <img class="search__icon--img" src="../img/multimedia/icons/search_icon.svg" alt="icono de busqueda">
             </picture>
-            <input type="search" name="buscar" id="buscar" placeholder="código, nombre o categoria">
+            <input class="search__textbox" type="search" name="buscar" id="buscar" placeholder="código, nombre o categoria">
         </section>
 
-        <section>
-            <h1>LISTADO DE PRODUCTOS</h1>
-            <article>
-                <p>AGREGAR</p>
-                <picture>
-                    <a href="../pages/create.html"><img src="" alt="Icono de agregar"></a>
+
+        <section class="add-product">
+            <h1 class="add-product__title">LISTADO DE PRODUCTOS</h1>
+            <article class="add-product__add">
+                <p class="add-product__add--label">AGREGAR</p>
+                <picture class="add-product__add--icon">
+                    <a class="add-product__add--icon__link" href="../pages/create.html"><span class="iconify add-product__add--icon__link--img" data-icon="ant-design:plus-square-filled" style="color: #f33;" data-width="40" data-height="40"></span></a>
                 </picture>
             </article>
-
-
-            <article>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Código</th>
-                            <th>Nombre del Producto</th>
-                            <th>Categoria</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>STW001001</td>
-                            <td>Baby Yoda Blueball </td>
-                            <td>STAR WARS</td>
-                            <td>
-                                <picture>
-                                    <a href="../pages/edit.html">
-                                        <img src="../img/multimedia/icons/edit_pencil.svg" alt="Icono Editar">
-                                    </a>
-                                </picture>
-                            </td>
-                            <td>
-                                <picture>
-                                    <button>
-                                        <img src="../img/multimedia/icons/delete_trash.svg" alt="Icono Trash">
-                                    </button>
-                                </picture>
-                            </td>
-
-
-                        </tr>
-                    </tbody>
-
-                </table>
-            </article>
         </section>
+
+
+
+        <table class="table-products" cellspacing="24">
+            <thead class="table-products--head">
+                <tr class="table-products--head__row">
+                    <th class="table-products--head__row--head">ID</th>
+                    <th class="table-products--head__row--head">Código</th>
+                    <th class="table-products--head__row--head">Nombre del Producto</th>
+                    <th class="table-products--head__row--head">Categoria</th>
+                </tr>
+            </thead>
+            <tbody class="table-products--body">
+                <tr class="table-products--body__row">
+                    <td class="table-products--body__row--data">1</td>
+                    <td class="table-products--body__row--data">STW001001</td>
+                    <td class="table-products--body__row--data">Baby Yoda Blueball </td>
+                    <td class="table-products--body__row--data">STAR WARS</td>
+                    <td class="table-products--body__row--data__icon">
+                        <picture class="table-products--body__row--data__icon--picture">
+                            <a class="table-products--body__row--data__icon--picture__link" href="../pages/edit.html">
+                                <img class="table-products--body__row--data__icon--picture__img" src="../img/multimedia/icons/edit_pencil.svg" alt="Icono Editar">
+                            </a>
+                        </picture>
+                    </td>
+                    <td class="table-products--body__row--data__icon">
+                        <picture class="table-products--body__row--data__icon--picture">
+                            <button class="table-products--body__row--data__icon--picture__link">
+                                <img class="table-products--body__row--data__icon--picture__img"  src="../img/multimedia/icons/delete_trash.svg" alt="Icono Trash">
+                             </button>
+                        </picture>
+                    </td>
+
+
+                </tr>
+            </tbody>
+
+        </table>
+
     </main>
 
     <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../pages/shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="../pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="../pages/login.html">INGRESAR</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
-            <picture><img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop"></picture>
-        </section>
-        <p>All rights reserved 2022 - Funkoshop &copy;</p>
-    </footer>
 
+        <nav class="navbar container">
+            <ul class="navbar__menu__footer">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/register.html">REGISTRARSE</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/login.html">INGRESAR</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture class="navbar__logo__footer">
+                <img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop">
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2022 - Funkoshop &copy;</p>
+
+
+
+
+
+    </footer>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </body>
 
 </html>
