@@ -226,9 +226,7 @@ footer {
     table-layout: auto;
 }
 
-.table-products--head {
-    color: #1D84B5;
-}
+.table-products--head {}
 
 .table-products--head__row {}
 
