@@ -6,103 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREATE ITEM</title>
+    <link rel="stylesheet" href="../styles/admin/admin.css">
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <picture>
-                <a href="index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
+        <nav class="navbar">
+            <picture class="navbar__logo">
+                <a href="./index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
             </picture>
-            <a href="index.html">SALIR</a>
+
+            <div class="navbar__menu">
+                <a class="navbar__link" href="../pages/login.html">SALIR</a>
+            </div>
         </nav>
     </header>
 
 
-
     <main>
-        <h1>CREAR NUEVO ITEM</h1>
+        <h1 class="main-title">CREAR NUEVO ITEM</h1>
         <!-- Agregar el action al form -->
-        <form action="">
+        <form class="main-form" action="">
 
-            <section>
-                <label for="categoria">Categoría:</label>
+            <section class="main-form__options">
+                <label class="main-form__options--label" for="categoria">Categoría:</label>
                 <!-- agregar placeholder -->
-                <select name="categoria" id="categoria">
+                <select class="main-form__options--select" name="categoria" id="categoria">
                     <!--  agregar categorias -->
                     <!-- <option value="star-wars">STAR WARS</option> -->
                 </select>
 
-                <label for="licencia">Licencia::</label>
+                <label class="main-form__options--label" for="licencia">Licencia::</label>
                 <!-- agregar placeholder -->
-                <select name="licencia" id="licencia">
+                <select class="main-form__options--select" name="licencia" id="licencia">
                     <!--  agregar licencias -->
                     <option value="" disabled selected>Select your option</option>
                     <!-- <option value=""></option> -->
                 </select>
             </section>
-            <section>
-                <label for="nombre-producto">Nombre del producto:</label>
-                <input type="text" name="nombre-producto" id="nombre-producto" placeholder="Kakashi Hatake Shippuden Saga">
-                <textarea name="descripcion-producto" id="descripcion-producto" cols="30" rows="10"></textarea>
+            <section class="main-form__product-name-description">
+                <label class="main-form__product-name-description--label" for="nombre-producto">Nombre del producto:</label>
+                <input class="main-form__product-name-description--input" type="text" name="nombre-producto" id="nombre-producto" placeholder="Kakashi Hatake Shippuden Saga">
+                <textarea class="main-form__product-name-description--textarea" name="descripcion-producto" id="descripcion-producto" cols="30" rows="10"></textarea>
             </section>
-            <section>
-                <label for="sku">SKU:</label>
-                <input type="text" name="sku" id="sku" placeholder="SSK111AB001">
-                <label for="precio">Precio:</label>
-                <input type="text" name="precio" id="precio" placeholder="$ 0.000,00">
-                <label for="stock">Stock:</label>
-                <input type="text" name="stock" id="stock" placeholder="0">
+            <section class="main-form__inputs">
+                <label class="main-form__inputs--label" for="sku">SKU:</label>
+                <input class="main-form__inputs--input" type="text" name="sku" id="sku" placeholder="SSK111AB001">
+                <label class="main-form__inputs--label" for="precio">Precio:</label>
+                <input class="main-form__inputs--input" type="text" name="precio" id="precio" placeholder="$ 0.000,00">
+                <label class="main-form__inputs--label" for="stock">Stock:</label>
+                <input class="main-form__inputs--input" type="text" name="stock" id="stock" placeholder="0">
             </section>
-            <section>
-                <label for="descuento">Descuento:</label>
-                <input type="text" name="descuento" id="descuento" placeholder="0%">
-                <label for="cuotas">Cuotas:</label >
-                <select name="cuotas" id="cuotas">
+            <section class="main-form__promo">
+                <label class="main-form__promo--label" for="descuento">Descuento:</label>
+                <input class="main-form__promo--input" type="text" name="descuento" id="descuento" placeholder="0%">
+                <label class="main-form__promo--label" for="cuotas">Cuotas:</label >
+                <select class="main-form__promo--select" name="cuotas" id="cuotas">
                     <!-- agregar las cuotas -->
                     <option value=""></option>
                     <option value=""></option>
                 </select>
 
-                <label for="imagenes">Imágenes:</label>
-                <input type="file" name="imagen" accept="image/png, image/gif, image/jpeg, image/webp" id="">
-                <input type="submit" value="Agregar Producto">
-                <input type="reset" value="Limpiar">
+                
 
 
 
             </section>
+            <section class="main-form__images">
+                <label class="main-form__images--label" for="imagenes">Imágenes:</label>
+                <input class="main-form__images--input" type="file" name="imagen" accept="image/png, image/gif, image/jpeg, image/webp" id="">
+            </section>
 
 
 
+            <section class="main-form__buttons">
+                <input class="main-form__buttons--button" type="submit" value="Agregar Producto">
+                <input class="main-form__buttons--button" type="reset" value="Limpiar">
+            </section>
         </form>
 
 
     </main>
 
     <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../pages/shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="../pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="../pages/login.html">INGRESAR</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
-            <picture><img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop"></picture>
-        </section>
-        <p>All rights reserved 2022 - Funkoshop &copy;</p>
+
+        <nav class="navbar container">
+            <ul class="navbar__menu__footer">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/register.html">REGISTRARSE</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/login.html">INGRESAR</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture class="navbar__logo__footer">
+                <img src="../img/multimedia/branding/isotype.svg" alt="Isotipo marca Funkoshop">
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2022 - Funkoshop &copy;</p>
+
+
+
+
+
     </footer>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </body>
 
 </html>
