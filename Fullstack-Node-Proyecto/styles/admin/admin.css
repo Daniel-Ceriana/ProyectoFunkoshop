@@ -76,6 +76,12 @@ p {
     font-size: var(--font-medium);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 
 /* HEADER */
 
@@ -156,6 +162,7 @@ header {
 }
 
 footer {
+    margin-top: auto;
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
     background-color: var(--dark-bg-solid);
