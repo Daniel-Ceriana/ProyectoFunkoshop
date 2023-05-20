@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funkoshop</title>
-    <link rel="stylesheet" href="../styles/index.css">
-
+    <title>ITEM</title>
+    <link rel="stylesheet" href="../styles/item.css">
 </head>
 
 <body>
@@ -15,7 +14,7 @@
     <header>
         <nav class="navbar">
             <picture class="navbar__logo">
-                <a href="./index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
+                <a href="../index.html"><img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
             </picture>
 
 
@@ -55,58 +54,40 @@
         </nav>
     </header>
 
-    <article class="hero">
-        <!-- parte de nuevos ingresos -->
-        <!-- <img class="hero__" src="" alt="fondo"> -->
-        <article class="hero__content container">
-            <h3 class="hero__title">Nuevos Ingresos</h3>
-            <p class="hero__text"> Descubrí el próximo Funko Pop de tu colección.</p>
-            <a class="hero__link" href="../pages/shop.html">SHOP</a>
-        </article>
+    <main>
 
-    </article>
 
-    <main class="container main-container">
-        <!-- parte de 3 presentaciones con imagenes -->
-        <section class="collection container">
-            <article class=" collection__content">
-                <h3 class="collection__title">Star Wars & The Mandalorian </h3>
-                <p class="collection__text">Disfruta de una saga que sigue agregando personajes a su colección.</p>
-                <a class="collection__link" href="../pages/shop.html">VER COLECCIÓN</a>
-            </article>
-            <picture class="collection__cover">
-                <img src="../img/multimedia/star-wars/baby-yoda-1.webp" alt="Funko Baby yoda">
-                <!-- puedo ser mas especifico, figura coleccionable funko de grogu de la serie The Mandalorian -->
+        <section class="product container">
+            <!-- item -->
+            <picture class="product__cover">
+                <img class="product__cover--img__front" src="../img/multimedia/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.">
+                <img class="product__cover--img__back" src="../img/multimedia/star-wars/baby-yoda-box.webp" alt="Caja de Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.">
+
             </picture>
+            <article class="product__content">
+                <p class="product__content--licence">STAR WARS</p>
+                <h1 class="product__content--name">BABY YODA BLUEBALL</h1>
+                <p class="product__content--text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+                <p class="product__content--price">$ 1799,99.-</p>
+                <!-- completar atributos del form agregarACarrito-->
+                <form class="product__form" action="">
+                    <button class="product__form--minus width-icon"><iconify-icon icon="ic:baseline-minus" style="color: white;"></iconify-icon></button>
+                    <input class="product__form--quantity" type="text" name="quantity" id="quantity" placeholder="0">
+                    <button class="product__form--plus width-icon"><iconify-icon icon="ic:outline-plus" style="color: white;"></iconify-icon></button>
+                    <input class="product__form--send" type="submit" value="Agregar al Carrito">
 
-        </section>
-        <section class="collection container">
-            <article class=" collection__content ">
-                <h3 class="collection__title">POKEMON INDIGO</h3>
-                <p class="collection__text">Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
-                <a class="collection__link" href="../pages/shop.html">VER COLECCIÓN</a>
+                    <!-- agregar link a metodos de pago -->
+                </form>
+                <p class="product__content--promo"> <a class="product__content--promo__link" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
             </article>
-            <picture class="collection__cover">
-                <img src="../img/multimedia/pokemon/vulpix-1.webp" alt="Funko Vulpix">
-            </picture>
 
-        </section>
-        <section class="collection container">
-            <article class="collection__content">
-                <h3 class="collection__title">HARRY POTTER</h3>
-                <p class="collection__text">Revive los recuerdos de una saga llena de magia y encanto.</p>
-                <a class="collection__link" href="../pages/shop.html">VER COLECCIÓN</a>
-            </article>
-            <picture class="collection__cover">
-                <img src="../img/multimedia/harry-potter/snape-patronus-1.webp" alt="Funko Snape Patronus">
-            </picture>
 
         </section>
 
-
+        </section>
         <section class="slider container">
             <!-- parte de ultimos lanzamientos, poner mayuscula -->
-            <h2 class="slider__title">ÚLTIMOS LANZAMIENTOS</h2>
+            <h2 class="slider__title">PRODUCTOS RELACIONADOS</h2>
             <ul class="slider__items">
                 <li class="slider__item">
                     <article class="card-item">
@@ -165,10 +146,12 @@
             <!-- slider -->
         </section>
 
+
+
+
     </main>
 
     <footer>
-
         <nav class="navbar container">
             <ul class="navbar__menu__footer">
                 <li class="navbar__item">
@@ -189,11 +172,6 @@
             </picture>
         </nav>
         <p class="footer__copy">All rights reserved 2022 - Funkoshop &copy;</p>
-
-
-
-
-
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
