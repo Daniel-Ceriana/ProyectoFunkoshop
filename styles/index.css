@@ -31,10 +31,10 @@
     --font-small: 1.6em;
     --font-xsmall: 1.4em;
     /* font sizes mobile */
-    --font-display-mobile: 4.4em;
-    --font-jumbo-mobile: 3.6em;
+    --font-display-mobile: 3.4em;
+    --font-jumbo-mobile: 3.0em;
     --font-xlarge-mobile: 2.8em;
-    --font-large-mobile: 2.2em;
+    --font-large-mobile: 2.0em;
     --font-medium-mobile: 1.6em;
     --font-small-mobile: 1.2em;
     --font-xsmall-mobile: 1.0em;
@@ -323,6 +323,20 @@ header {
     grid-template-areas: "ing ing ing ing ing ing ing ing ing ing ing ing" "item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1 item1" "item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2" "item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3 item3" "ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz ultLanz" */
 }
 
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
 
 /* COLLECTIONS */
 
@@ -330,7 +344,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: var(--spacing-16) 0;
+    padding: var(--spacing-16)0;
 }
 
 .collection:nth-child(2) .collection__cover {
@@ -375,22 +389,46 @@ header {
     /* border-radius: 10px 100px /120px; */
 }
 
-
-/* .nombre {
-    font-size: var(--font-xsmall);
+@media screen and (max-width: 900px) {
+    .collection {
+        padding: var(--spacing-16) var(--spacing-95);
+    }
+    .collection__content {
+        gap: var(--spacing-24);
+    }
+    .collection__title {
+        font-size: var(--font-display);
+    }
+    .collection__text {
+        font-size: var(--font-large);
+    }
+    .collection__link {
+        font-size: var(--font-medium);
+        padding: var(--spacing-16) var(--spacing-36);
+    }
 }
 
-.precio {
-    font-size: var(--font-small);
+@media screen and (max-width: 600px) {
+    .collection {
+        padding: var(--spacing-8);
+    }
+    .collection__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-24);
+        align-items: start;
+    }
+    .collection__title {
+        font-size: var(--font-display-mobile);
+    }
+    .collection__text {
+        font-size: var(--font-large-mobile);
+    }
+    .collection__link {
+        font-size: var(--font-small-mobile);
+        padding: var(--spacing-16) var(--spacing-36);
+    }
 }
-
-.cuotas {
-    font-size: var(--font-xsmall);
-}
-
-h4 {
-    font-size: var(--font-medium);
-} */
 
 
 /* SLIDER */
@@ -402,7 +440,7 @@ h4 {
     margin: var(--spacing-68) auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .slider {
         display: none;
     }
