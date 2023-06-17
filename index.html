@@ -15,23 +15,26 @@
     <header>
         <nav class="navbar">
             <picture class="navbar__logo">
-                <a href="./index.html"><img src="./img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
+                <a class="desktop-logo" href="./index.html"><img src="./img/multimedia/branding/logo_light_horizontal.svg" alt="logo Funkoshop"></a>
+                <a class="mobile-logo" href="./index.html"><img src="./img/multimedia/branding/isotype.svg" alt="Isotype Funkoshop"></a>
             </picture>
 
 
             <ul class="navbar__menu">
                 <li class="navbar__item with-submenu">
                     <!-- menu desplegable shop -->
-                    <a class="navbar__link width-icon" href="./pages/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <p class="navbar__link width-icon" href="">SHOP
+                        <iconify-icon icon="tabler:chevron-down"></iconify-icon>
+                    </p>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="" class="submenu__link">Funkos</a>
+                            <a href="./pages/shop.html" class="submenu__link">Funkos</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="" class="submenu__link">Remeras</a>
+                            <a href="./pages/shop.html" class="submenu__link">Remeras</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="" class="submenu__link">LLaveros</a>
+                            <a href="./pages/shop.html" class="submenu__link">LLaveros</a>
                         </li>
                     </ul>
 
@@ -39,7 +42,7 @@
                 </li>
                 <li class="navbar__item">
                     <!-- agregar link a un formulario de contacto, o de info para contacto -->
-                    <a class="navbar__link" href="./pages/contacto.html">CONTACTO</a>
+                    <a class="navbar__link navbar__contacto" href="./pages/contacto.html">CONTACTO</a>
                 </li>
                 <li class="navbar__item">
                     <!-- link a login -->
