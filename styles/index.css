@@ -40,6 +40,7 @@
     --font-xsmall-mobile: 1.0em;
     /* spacings */
     --spacing-128: 12.8rem;
+    --spacing-95: 9.5rem;
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
@@ -85,7 +86,7 @@ p {
 }
 
 
-/* cambiar color */
+/* HEADER */
 
 .mobile-logo {
     display: none;
@@ -234,7 +235,7 @@ header {
     background-attachment: fixed;
     background-position: top;
     /* verificar que esto sea correcto */
-    padding: var(--spacing-128) var(--spacing-8);
+    padding: var(--spacing-128) var(--spacing-95);
     position: relative;
 }
 
@@ -283,6 +284,33 @@ header {
 .hero__link:hover {
     background-color: var(--primary-900);
     color: var(--light-font-solid);
+}
+
+@media screen and (max-width: 900px) {
+    .hero {
+        padding: var(--spacing-68) var(--spacing-95);
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        padding: var(--spacing-36) var(--spacing-8);
+        position: relative;
+    }
+    .hero__content {
+        gap: var(--spacing-16);
+    }
+    .hero__title {
+        font-size: var(--font-jumbo-mobile);
+    }
+    .hero__text {
+        font-size: var(--font-medium-mobile);
+    }
+    .hero__link {
+        font-size: var(--font-medium-mobile);
+        padding: var(--spacing-8) var(--spacing-68);
+    }
 }
 
 .container {
