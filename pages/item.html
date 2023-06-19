@@ -71,14 +71,14 @@
                 <p class="product__content--text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
                 <p class="product__content--price">$ 1799,99.-</p>
                 <!-- completar atributos del form agregarACarrito-->
-                <form class="product__form" action="">
+                <section class="product__form">
                     <button class="product__form--minus width-icon"><iconify-icon icon="ic:baseline-minus" style="color: white;"></iconify-icon></button>
-                    <input class="product__form--quantity" type="text" name="quantity" id="quantity" placeholder="0">
+                    <input class="product__form--quantity" type="text" name="quantity" id="quantity" placeholder="0" readonly>
                     <button class="product__form--plus width-icon"><iconify-icon icon="ic:outline-plus" style="color: white;"></iconify-icon></button>
                     <input class="product__form--send" type="submit" value="Agregar al Carrito">
 
                     <!-- agregar link a metodos de pago -->
-                </form>
+                </section>
                 <p class="product__content--promo"> <a class="product__content--promo__link" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
             </article>
 
@@ -184,6 +184,7 @@
         </nav>
         <p class="footer__copy">All rights reserved 2022 - Funkoshop &copy;</p>
     </footer>
+    <script src="../scripts/itemPage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
