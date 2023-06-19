@@ -553,6 +553,20 @@ footer {
     margin-top: var(--spacing-36);
 }
 
+@media screen and (max-width: 600px) {
+    footer {
+        gap: var(--spacing-24);
+        padding: var(--spacing-36);
+    }
+    .footer__copy {
+        text-align: center;
+        margin-top: var(--spacing-36);
+    }
+    .navbar__logo__footer {
+        max-width: var(--spacing-95);
+    }
+}
+
 
 /* ANIMATIONS */
 
