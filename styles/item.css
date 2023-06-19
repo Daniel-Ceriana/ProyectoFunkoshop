@@ -163,20 +163,34 @@
     .slider {
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-36);
-        margin: var(--spacing-68) auto;
+        /* gap: var(--spacing-36); */
+        /* margin: var(--spacing-68) auto; */
     }
     
     .slider__items {
         display: flex;
-        gap: var(--spacing-24);
+        /* gap: var(--spacing-24); */
     }
     
     .slider__title {
+        padding: 0 var(--spacing-128);
         font-family: var(--alternative-font);
         font-size: var(--font-display);
         font-weight: 700;
         text-transform: uppercase;
+    }
+    
+    .glide__arrow {
+        color: var(--dark-solid);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
+        background: var(--light-font-solid);
+        border-radius: 4px;
+    }
+    
+    @media screen and (max-width:600px) {
+        .slider__title {
+            font-size: var(--font-display-mobile);
+        }
     }
     
     .card-item__cover {
