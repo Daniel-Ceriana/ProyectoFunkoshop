@@ -32,6 +32,14 @@
         --font-medium: 1.8em;
         --font-small: 1.6em;
         --font-xsmall: 1.4em;
+        /* font sizes mobile */
+        --font-display-mobile: 3.4em;
+        --font-jumbo-mobile: 3.0em;
+        --font-xlarge-mobile: 2.8em;
+        --font-large-mobile: 2.0em;
+        --font-medium-mobile: 1.6em;
+        --font-small-mobile: 1.2em;
+        --font-xsmall-mobile: 1.0em;
         /* spacings */
         --spacing-128: 12.8rem;
         --spacing-68: 6.8rem;
@@ -366,6 +374,41 @@
     
     .product__content--promo__link {
         text-decoration: underline;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .product {
+            flex-direction: column;
+            padding: var(--spacing-68) var(--spacing-8);
+            gap: var(--spacing-68);
+        }
+        .product__content--licence {
+            font-size: var(--font-small-mobile);
+        }
+        .product__content--name {
+            font-size: var(--font-jumbo-mobile);
+        }
+        .product__content--text {
+            font-size: var(--font-large-mobile);
+        }
+        .product__content--price {
+            font-size: var(--font-jumbo-mobile);
+        }
+        .product__form--minus {
+            width: var(--spacing-28);
+            height: var(--spacing-28);
+        }
+        .product__form--plus {
+            width: var(--spacing-28);
+            height: var(--spacing-28);
+        }
+        .product__form--send {
+            padding: var(--spacing-8) var(--spacing-8);
+            font-size: var(--font-medium-mobile);
+        }
+        .product__content--promo {
+            font-size: var(--font-xsmall-mobile);
+        }
     }
     /* ANIMATIONS */
     
