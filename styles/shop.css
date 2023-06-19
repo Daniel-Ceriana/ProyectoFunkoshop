@@ -100,6 +100,14 @@ select {
 
 /* HEADER */
 
+.mobile-logo {
+    display: none;
+}
+
+.desktop-logo {
+    display: block;
+}
+
 header {
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
@@ -137,6 +145,12 @@ header {
     background-color: var(--primary-900);
 }
 
+.width-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
 .with-submenu:hover>.submenu {
     display: block;
 }
@@ -160,11 +174,65 @@ header {
     transition: background .3s ease-in-out;
 }
 
-.width-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-8);
+@media screen and (max-width: 900px) {
+    .mobile-logo {
+        display: none;
+    }
+    .desktop-logo {
+        display: block;
+    }
+    header {
+        gap: var(--spacing-24);
+        padding: var(--spacing-24);
+    }
+    .navbar {
+        max-width: 700px;
+    }
+    .navbar__logo {
+        max-width: 250px;
+    }
+    .navbar__link {
+        font-size: var(--font-medium);
+        padding: 0;
+    }
+    .navbar__menu {
+        gap: var(--spacing-8);
+    }
+    .submenu {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-logo {
+        display: block;
+    }
+    .desktop-logo {
+        display: none;
+    }
+    header {
+        gap: var(--spacing-8);
+        /* padding: var(--spacing-8); */
+    }
+    .navbar__link {
+        font-size: var(--font-medium-mobile);
+        padding: 0;
+    }
+    .navbar {
+        max-width: 300px;
+    }
+    .navbar__logo {
+        max-width: 50px;
+    }
+    .navbar__menu {
+        gap: var(--spacing-8);
+    }
+    .navbar__contacto {
+        display: none;
+    }
+    .submenu {
+        width: 110px;
+    }
 }
 
 
@@ -261,6 +329,20 @@ footer {
 .footer__copy {
     text-align: center;
     margin-top: var(--spacing-36);
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        gap: var(--spacing-24);
+        padding: var(--spacing-36);
+    }
+    .footer__copy {
+        text-align: center;
+        margin-top: var(--spacing-36);
+    }
+    .navbar__logo__footer {
+        max-width: var(--spacing-95);
+    }
 }
 
 
